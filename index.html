@@ -1,13 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+    A Design by Prateek Dalbehera.
+    Author URL: https://prateekdalbehera.com
+    Contact: shibaprateek@gmail.com
+-->
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PrateekdalbeheraGithubIo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.09e2c710755c8867a460.css"></head>
-<body>
-  <app-root></app-root>
-<script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.6696c533341b95a3d617.js" nomodule defer></script><script src="polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="main-es2015.44542224eb7a73737c04.js" type="module"></script><script src="main-es5.44542224eb7a73737c04.js" nomodule defer></script></body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MyBlog</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta
+      content="Dotnet,Csharp,Angular,Python,Software,Developer"
+      name="Description"
+    />
+    <meta
+      content="prateek,dalbehera,software,developer,Honeywell,SeniorEngineer"
+      name="Keywords"
+    />
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+    <meta content="Global" name="Distribution" />
+    <meta content="Prateek Dalbehera - shibaprateek@gmail.com" name="Author" />
+    <meta content="index,follow" name="Robots" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta content="#343a40" name="theme-color" />
+    <!-- Windows Phone -->
+    <meta content="#343a40" name="msapplication-navbutton-color" />
+    <!-- iOS Safari -->
+    <meta content="#343a40" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      /* Hero */
+      .section-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .container-hero {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+
+      .hero-layout {
+        padding: 1rem;
+      }
+
+      .hero {
+        width: 100%;
+        height: 100vh;
+        background-color: #f1f1f1;
+        background: linear-gradient(#af4c51 1%, 30%, rgba(35, 53, 111) 70%);
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16),
+          0 3px 6px rgba(0, 0, 0, 0.23);
+        padding-top: 15rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.25;
+      }
+
+      .subtitle + .title {
+        margin-top: -1.25rem;
+      }
+
+      .hero .profession {
+        margin-top: -1.25rem;
+        padding-top: 50px;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero .subtitle {
+        padding: 5px;
+        color: whitesmoke;
+      }
+
+      .title {
+        margin-top: 0;
+        font-weight: 600;
+        line-height: 1.125;
+      }
+
+      .hero .title {
+        font-family: "Kaushan Script", sans-serif;
+        transform: rotate(-5deg);
+        font-size: 5rem;
+        color: whitesmoke;
+      }
+
+      .subtitle,
+      .title {
+        word-break: break-word;
+      }
+      /* END - Hero */
+
+      .navbar {
+        overflow: hidden;
+        background-color: #fff;
+        /*box-shadow: 0 2px 0 0 #f5f5f5;*/
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      .nav-menu-right {
+        float: right;
+        display: block;
+        color: #1f2c6c;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+      }
+      .nav-menu-right:hover {
+        color: #fff;
+        background: linear-gradient(#af4c51, rgba(35, 53, 111));
+      }
+      .nav-menu-right:active {
+        border-bottom: 2px solid #1f2c6c;
+      }
+
+      .navbar .hamburger-icon {
+        display: none;
+      }
+
+      .brand-name {
+        text-transform: uppercase;
+        color: #1f2c6c;
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+
+      .brand-name:hover {
+        letter-spacing: 3px;
+        border-bottom: 2px solid #1f2c6c;
+      }
+
+      /* Make the navigation menu responsive using media queries. */
+      @media screen and (max-width: 600px) {
+        /* Hide right menus. */
+        .nav-menu-right {
+          display: none;
+        }
+        /* Show hamburger icon. */
+        .navbar .hamburger-icon {
+          float: right;
+          display: block;
+        }
+      }
+      /* Add CSS properties to make the navbar responsive. */
+      @media screen and (max-width: 600px) {
+        .navbar.responsive {
+          position: relative;
+        }
+        .navbar.responsive .hamburger-icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive .nav-menu-right {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .navbar.responsive .brand-name {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      /* Sticky Navbar*/
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .sticky + .Site-content {
+        padding-top: 102px;
+      }
+
+      /* Scroll to Top */
+      .scrollToTop {
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        display: none;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        z-index: 99;
+        border: 1px solid;
+        outline: none;
+        /*background-color: #1f2c6c;*/
+        color: #1f2c6c;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 2rem;
+        box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+      }
+
+      .scrollToTop:hover {
+        /*background-color: #1f2c6c;*/
+        color: #fff;
+        background: linear-gradient(#af4c51, rgba(35, 53, 111));
+      }
+
+      svg:not(:root).svg-inline--fa {
+        overflow: visible;
+      }
+      .svg-inline--fa.fa-w-10 {
+        width: .625em;
+      }
+      .svg-inline--fa {
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -.125em;
+      }
+
+      /*************/
+
+      /* fonts. */
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+          Helvetica, Arial, sans-serif;
+      }
+      body {
+        color: #4a4a4a;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    </style>
+  <link rel="stylesheet" href="styles.54c242f3dcea04c1966f.css"></head>
+  <body>
+    <app-root></app-root>
+    <script>
+      function toggleMenu() {
+        document.getElementById("hamburger").classList.toggle("is-active");
+
+        const navbar = document.getElementById("navbar");
+        if (navbar.className === "navbar") {
+          navbar.className += " responsive";
+        } else {
+          navbar.className = "navbar";
+        }
+      }
+
+      window.onscroll = function() {
+        togglescrollToTopButton();
+        // toggleSticky();
+      };
+
+      function togglescrollToTopButton() {
+        const navbar = document.getElementById("navbar");
+        const offsetInPixel = navbar.offsetTop;
+
+        const _scrollToTop = document.getElementById("scrollToTop");
+
+        if (document.body.scrollTop > offsetInPixel || document.documentElement.scrollTop > offsetInPixel) {
+          _scrollToTop.style.display = "block";
+        } else {
+          _scrollToTop.style.display = "none";
+        }
+      }
+
+      function goToTop() {
+        const navbar = document.getElementById("navbar");
+        const offsetInPixel = navbar.offsetTop;
+
+        document.body.scrollTop = offsetInPixel; // For Safari
+        window.scroll({
+          top: offsetInPixel, 
+          left: 0, 
+          behavior: 'smooth'
+        });
+      }
+
+      function toggleSticky() {
+        const navbar = document.getElementById("navbar");
+        if (navbar !== undefined) {
+          const sticky = navbar.offsetTop;
+          if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      }
+    </script>
+  <script src="runtime-es2015.c9afb3256f2870e161de.js" type="module"></script><script src="runtime-es5.c9afb3256f2870e161de.js" nomodule defer></script><script src="polyfills-es5.0e4e1968447fab48e788.js" nomodule defer></script><script src="polyfills-es2015.bbb42ff2e1c488ff52d5.js" type="module"></script><script src="main-es2015.e1b357fb91793d3e782b.js" type="module"></script><script src="main-es5.e1b357fb91793d3e782b.js" nomodule defer></script></body>
 </html>
