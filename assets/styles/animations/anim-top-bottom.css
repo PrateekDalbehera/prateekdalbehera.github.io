@@ -1,0 +1,23 @@
+.move-top-bottom {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: mover-top-bottom 1s infinite alternate;
+  animation: mover-top-bottom 1s infinite alternate;
+}
+
+@-webkit-keyframes mover-top-bottom {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+@keyframes mover-top-bottom {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}

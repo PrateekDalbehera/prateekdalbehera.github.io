@@ -1,0 +1,28 @@
+.scrollToTop {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 99;
+    border: 1px solid;
+    outline: none;
+    /*background-color: #1f2c6c;*/
+    color: #1f2c6c;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+  }
+
+  .scrollToTop:hover {
+    /*background-color: #1f2c6c;*/
+    color: #fff;
+    background: linear-gradient(#af4c51, rgba(35, 53, 111));
+  }
+
+  .scrollToTop > i {
+    vertical-align: 5%;
+  }

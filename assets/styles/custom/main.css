@@ -1,0 +1,21 @@
+.html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*padding: 0.5em;
+    max-width: 48em;
+    margin: auto;*/
+}
+
+.Site-content {
+  min-height: 100vh;
+  flex: 1;
+}
