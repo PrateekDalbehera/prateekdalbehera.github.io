@@ -26,3 +26,11 @@
   .scrollToTop > i {
     vertical-align: 5%;
   }
+
+  /* For Desktop */
+  @media only screen and (min-width: 768px) {
+    .scrollToTop {
+      bottom: 20px;
+      right: 20px;
+    }
+  }

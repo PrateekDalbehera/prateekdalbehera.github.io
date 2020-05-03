@@ -26,3 +26,8 @@ i.icss-linkedin:after {
   top: 0.2em;
   left: 0.225em;
 }
+
+i.icss-linkedin:hover {
+  color: white;
+  background-color: #0d75a7;
+}

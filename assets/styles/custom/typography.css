@@ -1,0 +1,17 @@
+.text-bold {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-d-left {
+    text-align: left;
+  }
+
+  .text-d-right {
+    text-align: right;
+  }
+
+  .text-d-center {
+    text-align: center;
+  }
+}

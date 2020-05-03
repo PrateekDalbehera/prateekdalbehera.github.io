@@ -45,3 +45,7 @@ i.icss-github-o:after {
   top: 0.2em;
   transform: rotate(65deg);
 }
+
+i.icss-github-o:hover {
+  color: #211F1F;
+}

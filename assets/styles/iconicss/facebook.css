@@ -25,3 +25,7 @@ i.icss-facebook:after {
   top: 0.49em;
   left: 0.35em;
 }
+
+i.icss-facebook:hover {
+  color: #3b5998;
+}
